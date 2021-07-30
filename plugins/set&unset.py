@@ -6,11 +6,6 @@ from pyrogram.types import (
 from helper.database import set,unset ,insert
 from helper.list import list
 
-@Client.on_message(filters.private &filters.command(['unset']))
-async def unsetlg(client,message):
-	unset(int(message.chat.id))
-	await message.reply_text("Successfully removed custom default language")
-
 @Client.on_message(filters.private &filters.command(['set']))
 async def setlg(client,message):
     	    user_id = int(message.chat.id)
